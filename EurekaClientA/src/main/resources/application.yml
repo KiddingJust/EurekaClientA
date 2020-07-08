@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: service-a
+server:
+    port: 8800
+eureka:
+  instance:
+    instance-id: service-a
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://192.168.8.248:8761/eureka/
+      enabled: true
+            
+            
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: "*"
+#  endpoint:
+#    shutdown:
+#      enabled: true
+#    health:
+#      show-details: ALWAYS
